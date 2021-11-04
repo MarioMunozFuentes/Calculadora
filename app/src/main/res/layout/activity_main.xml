@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:hint="Introduce número 1"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/btreset"
+        app:layout_constraintEnd_toStartOf="@+id/btreset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btreset" />
+
+    <EditText
+        android:id="@+id/etn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:hint="Introduce número 2"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/btreset"
+        app:layout_constraintEnd_toStartOf="@+id/btreset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btreset" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:text="RESULTADO"
+        android:textAlignment="textEnd"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/etn2"
+        app:layout_constraintTop_toBottomOf="@+id/etn2" />
+
+    <Button
+        android:id="@+id/btreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="5dp"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btsumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="Sumar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btrestar"
+        app:layout_constraintEnd_toStartOf="@+id/btrestar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btrestar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="Restar"
+        app:layout_constraintBottom_toTopOf="@+id/btdividir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btsumar" />
+
+    <Button
+        android:id="@+id/btmultiplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="120dp"
+        android:text="Multiplicar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btdividir"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btdividir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dividir"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btmultiplicar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btmultiplicar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
